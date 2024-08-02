@@ -11,7 +11,7 @@ const INR_TO_USD_CONVERSION_RATE = 0.0125;
 // placing user order for frontend
 const placeOrder = async (req, res) => {
 
-    const frontend_url = "http://localhost:5174";
+    const frontend_url = "https://food-del-frontend-mmtf.onrender.com/";
 
     try {
         const newOrder = new orderModel({
