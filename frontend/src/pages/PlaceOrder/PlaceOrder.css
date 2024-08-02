@@ -1,0 +1,114 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+.place-order .cart-total button {
+    margin-top: 10px;
+}
+
+
+/* new */
+
+.payment-method {
+    margin: 20px 0;
+}
+
+.payment-method h2 {
+    margin-bottom: 10px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid tomato;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    font-size: 16px;
+    width: 19em;
+}
+
+.payment-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid tomato;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 5px;
+}
+
+.payment-option input[type="radio"]::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.payment-option input[type="radio"]:checked::before {
+    opacity: 1;
+}
+
+
+.payment-option:hover {
+    background-color: #fce4e4;
+}
+
+.payment-option span {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
